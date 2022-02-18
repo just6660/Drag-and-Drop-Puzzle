@@ -1,0 +1,81 @@
+{
+  "lines": [
+    {
+      "indentations": 0,
+      "tokens": [
+        {
+          "text": "count",
+          "type": "user-defined-variable"
+        },
+        {
+          "text": " = ",
+          "type": "operator"
+        },
+        {
+          "text": "0",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "indentations": 0,
+      "tokens": [
+        {
+          "text": "while",
+          "type": "keyword"
+        },
+        {
+          "text": "{input}"
+        },
+        {
+          "text": ":",
+          "type": "operator"
+        }
+      ]
+    },
+    {
+      "indentations": 1,
+      "tokens": [
+        {
+          "text": "print",
+          "type": "built-in-function"
+        },
+        {
+          "text": "(",
+          "type": "operator"
+        },
+        {
+          "text": "{input}"
+        },
+        {
+          "text": " + ",
+          "type": "operator"
+        },
+        {
+          "text": "str({input})",
+          "type": "built-in-function"
+        },
+        {
+          "text": ")",
+          "type": "operator"
+        }
+      ]
+    },
+    {
+      "indentations": 1,
+      "tokens": [
+        {
+          "text": "count",
+          "type": "user-defined-variable"
+        },
+        {
+          "text": " = ",
+          "type": "operator"
+        },
+        {
+          "text": "{input}"
+        }
+      ]
+    }
+  ]
+}

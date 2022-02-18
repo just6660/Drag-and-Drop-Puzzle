@@ -1,0 +1,14 @@
+.puzzle-section {
+  background-color: bisque;
+}
+
+.line {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.token {
+  padding: 10px 15px;
+  border: 1px solid black;
+}
