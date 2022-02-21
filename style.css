@@ -1,14 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Source Code Pro", sans-serif;
+  font-weight: 600;
+}
 .puzzle-section {
   background-color: bisque;
 }
-
+.solution-section {
+  background-color: cadetblue;
+  border: 3px dashed black;
+}
 .line {
   margin: 10px 0;
   display: flex;
   gap: 10px;
 }
-
 .token {
+  display: inline-block;
   padding: 10px 15px;
   border: 1px solid black;
+  border-radius: 5px;
+}
+.draggable {
+  cursor: move;
+}
+.draggable:hover {
+  opacity: 0.5;
+}
+.droppable {
+  border: 1px solid black;
+  background-color: #fff;
+}
+.droppable-hover {
+  border: 10px dashed black;
+}
+.item-1 {
+  grid-area: 1/1/1/-1;
+}
+.item-2 {
+  grid-area: 1/2/1/-1;
+}
+.solution-line {
+  grid-column-end: -1;
+}
+.hide {
+  display: none;
 }
