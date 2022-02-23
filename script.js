@@ -1,4 +1,3 @@
-//remove indent class and try to disable the indent from moving around
 (async () => {
   //read in the json files for puzzle and solution
   const puzzleObject = await fetch("./puzzle.json").then((response) =>
@@ -24,12 +23,6 @@
     solutionLine.className = "line nested";
     const indentDiv = document.createElement("div");
     indentDiv.className = "nested indent-nested";
-    /*
-    const nestedDiv = document.createElement("div");
-    indentDiv.className = "indent";
-    */
-    //nestedDiv.className = "nested indent-nested";
-    //indentDiv.appendChild(nestedDiv);
     solutionLine.appendChild(indentDiv);
     solutionSection.appendChild(solutionLine);
 
@@ -40,6 +33,9 @@
       token.dataset.text = elem.text;
       token.dataset.type = elem.type;
       token.textContent = elem.text;
+      if (token.textContent.includes("{input}")) {
+        token.innerHTML = token.innerHTML.replace("{input}", "<input></input>");
+      }
       line.append(token);
     });
     puzzleSection.appendChild(line);
@@ -52,12 +48,11 @@
     new Sortable(arr[i], {
       group: "shared",
       group: "nested",
-      animation: 350,
+      animation: 50,
       fallbackOnBody: true,
       swapThresold: 0.65,
     });
   }
-  let indentHidden = false;
   const nested = document.querySelectorAll(".nested");
   const nestedLines = document.getElementsByClassName("line nested");
   const indentElements = document.getElementsByClassName("indent-nested");
@@ -65,7 +60,7 @@
     new Sortable(nested[i], {
       group: "shared",
       group: "nested",
-      animation: 150,
+      animation: 50,
       fallbackOnBody: true,
       invertSwap: true,
       swapThreshold: 0.65,

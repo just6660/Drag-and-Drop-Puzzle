@@ -3,6 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+input {
+  font-family: "Source Code Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: lightblue;
+}
 body {
   font-family: "Source Code Pro", sans-serif;
   font-weight: 600;
@@ -27,24 +35,16 @@ body {
   border: 1px solid black;
   border-radius: 5px;
 }
-.indent {
-  order: 1;
-  margin-left: 20px;
-  padding: 0;
-  background-color: #e6e6e6;
-  min-width: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-}
 .nested {
   display: flex;
   gap: 10px;
 }
 .indent-nested {
   order: 1;
-  margin-left: 20px;
-  background-color: #e6e6e6;
-  min-width: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  margin-left: 2em;
+  background-color: cadetblue;
+  width: 100%;
+  /*border: 1px solid rgba(0, 0, 0, 0.125);*/
   height: 42px;
   padding: 0;
   padding-left: 2em;
